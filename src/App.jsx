@@ -13,7 +13,6 @@ const App = () => (
   <>
     <GlobalStyle/>
     <Header/>
-    <div>portifolio netflix theme</div>
   </>
 )
 
