@@ -8,7 +8,7 @@ export const Container = styled.header`
 
     z-index: 10;
     width: 100%;
-    padding: 20px 40px;
+    padding: 20px 0;
     position: fixed;
 
     background: ${({isBlack})=>(
@@ -44,4 +44,36 @@ export const HeaderItems = styled.div`
       }
 `
 
-export default { Container, HeaderItems }
+export const ProfileItems = styled.div`
+  display: flex;
+  align-items: center;
+
+  > svg {
+    width: 22px;
+    height: 22px;
+    color: #FFF;
+    margin-right: 30px;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    outline: none;
+    border: 0;
+    img {
+      width: auto;
+      height: 30px;
+      border-radius: 6px;
+      margin-right: 3px;
+    }
+    > svg {
+      width: 15px;
+      height: 15px;
+      color: #FFF;
+    }
+  }
+
+`
+
+export default { Container, HeaderItems, ProfileItems }

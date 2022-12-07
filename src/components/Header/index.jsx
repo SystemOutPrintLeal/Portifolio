@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, HeaderItems } from "./style.js";
+import { Container, HeaderItems, ProfileItems} from "./style.js";
 import { FaSearch, FaBell, FaGift, FaCaretDown } from 'react-icons/fa';
 
 const Header = () => (
@@ -13,7 +13,7 @@ const Header = () => (
             <li>Minha Lista</li>
             </ul>
         </HeaderItems>
-        <>
+        <ProfileItems>
             <FaSearch />
             <FaGift />
             <FaBell />
@@ -24,7 +24,7 @@ const Header = () => (
                 />
                 <FaCaretDown />
             </button>
-        </>
+        </ProfileItems>
         
     </Container>
 )
