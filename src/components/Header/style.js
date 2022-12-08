@@ -26,6 +26,12 @@ export const HeaderItems = styled.div`
     display: flex;
     align-items: center;
 
+    img {
+      width: auto;
+      height: 30px;
+      margin-right: 5px;
+    }
+
     ul {
         list-style: none;
         display: flex;
