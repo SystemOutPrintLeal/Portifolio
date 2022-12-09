@@ -16,12 +16,10 @@ const Header = () => {
                     <li>Sobre</li>
                     <li>Habilidades</li>
                     <li>Curiosidades</li>
-                    <li>Extra</li>
                 </ul>
             </HeaderItems>
             <ProfileItems>
                 <FaSearch />
-                <FaGift />
                 <FaBell />
                 <button 
                 type="button"
