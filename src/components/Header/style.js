@@ -37,7 +37,7 @@ export const HeaderItems = styled.div`
         display: flex;
         align-items: center;
         li {
-          font-size: 14px;
+          font-size: 17px;
           color: #FFF;
           font-weight: 400;
           & + li {
@@ -76,6 +76,7 @@ export const ProfileItems = styled.div`
     > svg {
       width: 15px;
       height: 15px;
+      margin-right: 10px;
       color: #FFF;
     }
   }
