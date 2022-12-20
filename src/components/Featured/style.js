@@ -20,7 +20,7 @@ export const FeaturedBackground = styled.div`
   }
 `;
 
-export const InsindeFeatured = styled.div`
+export const InsideFeatured = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -38,13 +38,13 @@ export const InsindeFeatured = styled.div`
   );
 
   h1 {
-    font-size: 40px;
+    font-size: 50px;
     margin-bottom: 30px;
   }
 
   p {
     width: 500px;
-    font-size: 17px;
+    font-size: 18px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
     margin-bottom: 10px;
  
@@ -55,7 +55,7 @@ export const InsindeFeatured = styled.div`
   }
 
   > span {
-    font-size: 14px;
+    font-size: 15px;
     color: #b9bbbe;
     margin-bottom: 20px;
   }
@@ -70,7 +70,7 @@ export const InsindeInfo = styled.div`
   margin-bottom: 10px;
 
   span {
-    font-size: 13px;
+    font-size: 15px;
     & + span {
       margin-left: 20px;
     }
@@ -92,7 +92,7 @@ export const Buttons = styled.div`
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 15px;
     svg {
       width: 15px;
       height: 15px;
@@ -114,4 +114,4 @@ export const ButtonPlay = styled.a`
 export const ButtonAbout = styled.a`
   background: rgba(109, 109, 110, 0.7);
 `
-export default {Container, FeaturedBackground, InsindeFeatured, InsindeInfo, Buttons, ButtonPlay, ButtonAbout}
+export default {Container, FeaturedBackground, InsideFeatured, InsindeInfo, Buttons, ButtonPlay, ButtonAbout}

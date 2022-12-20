@@ -4,7 +4,7 @@ import { FaPlay, FaInfoCircle } from 'react-icons/fa';
 import { 
         Container, 
         FeaturedBackground, 
-        InsindeFeatured, 
+        InsideFeatured, 
         InsindeInfo,
         Buttons, 
         ButtonPlay, 
@@ -16,7 +16,7 @@ const Featured = () => {
         <Container>
             <FeaturedBackground>
                 <div>
-                    <InsindeFeatured>
+                    <InsideFeatured>
                         <h1>Desenvolvedor FullStack Pleno</h1>
                         <InsindeInfo>
                             <span> 100% relevante</span>
@@ -40,7 +40,7 @@ const Featured = () => {
                                 <FaInfoCircle /> Mais informações
                             </ButtonAbout>
                         </Buttons>
-                    </InsindeFeatured>
+                    </InsideFeatured>
                 </div>
             </FeaturedBackground>
         </Container>
