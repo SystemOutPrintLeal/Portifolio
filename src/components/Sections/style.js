@@ -78,7 +78,21 @@ export const Skill = styled.div`
           opacity: 1;
           border-radius: 0 8px 8px 0;
         }
+        &:last-child > div {
+          top: 0;
+          left: 10px;
+          z-index: 10;
+          width: 300px;
+          height: 300px;
+          transform: scale(1) translateX(-260px);
+          opacity: 1;
+          border-radius: 8px 0 0 8px;
+        }
 
+        &:last-child > img {
+          border-radius:  0 8px 8px 0;
+          transform: scale(1) translateX(50px);
+        }
         img {
           border-radius: 8px 0 0 8px;
           transform: scale(1) translateX(-100px);
