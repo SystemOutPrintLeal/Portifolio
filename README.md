@@ -28,15 +28,11 @@
 
 ## 📥 Instalação e execução
 
-1 - execute >> ```
-    $ git clone git@github.com:LeeonardoVargas/netflix-clone.git && cd netflix-clone
-    ```
+1 - Clone o repositorio 
 
-
-2 - Navegue para dentro do repositorio >> ```` cd ./Favorite-Movies-View````
+2 - Navegue para dentro do repositorio >> ```` cd ./Portifolio````
 
 3 - execute >> ```` npm install ````
-
 
 4 - execute >> ```` npm start ````
     
