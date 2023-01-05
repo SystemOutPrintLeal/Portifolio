@@ -6,7 +6,9 @@ import {
     SkillWrapper, 
     Skill,
     SkillCard,
-    SkillControll
+    SkillControll,
+    Infos,
+    relevances,
     } from './style'
 
 import {
@@ -18,21 +20,20 @@ import {
     FaPlus,
     } from 'react-icons/fa';
 
-const Sections = () => {
-
-    const foo = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+const Sections = ({skills, title}) => {
 
     const [marginContent, setMarginContent] = useState(0);
 
-    const MAX_WIDTH_CONTENT = useMemo(() => foo.length * 220, [foo]);
+    const MAX_WIDTH_CONTENT = useMemo(() => skills.length * 220, [skills]);
 
     const handleScroll = useCallback(
         direction => {
           setMarginContent(stateMargin => {
-            const newValue = stateMargin + (direction === 'left' ? -400 : 400);
+            let newValue = stateMargin + (direction === 'left' ? -200 : 200);
     
-            const isError =
-              MAX_WIDTH_CONTENT + newValue < window.innerWidth || newValue === 400;
+            let isError = MAX_WIDTH_CONTENT + newValue < window.innerWidth || newValue === 200;
+
+            console.log(newValue)
     
             return isError ? stateMargin : newValue;
           });
@@ -40,50 +41,67 @@ const Sections = () => {
         [MAX_WIDTH_CONTENT],
       );
 
-    return(
-        <Container>
-            <h1>Name</h1>
-            <ButtonLetf type="button" onClick={() => handleScroll('right')}>
-                <FaChevronLeft />
-            </ButtonLetf>
+      const relevanceColor = (relevance) => 
+        {
+            if(relevance <= 25) 
+                return relevances["low"]; 
+            else if(relevance <= 50) 
+                return relevances["mediumLow"]; 
+            else if(relevance <= 75) 
+                return relevances["medium"]; 
+            else if(relevance <= 100) 
+                return relevances["hight"]; 
+        }
+        return(
+            <Container>
+                <h1>{title}</h1>
+                <ButtonLetf type="button" onClick={() => handleScroll('right') } onMouseEnter={()=> handleScroll('right') }>
+                    <FaChevronLeft />
+                </ButtonLetf>
+    
+                <SkillWrapper style={{ marginLeft: marginContent, width: MAX_WIDTH_CONTENT}}>
+                    {skills.map( (skill,key) =>(
+                        <Skill key={key}>
+                            <img
+                                src={`https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1uS9tYSYXU5jshLx2WlnOLZrMgD.jpg`}
+                                alt={`Skill`}/>
+    
+                            <SkillCard>
+                                <strong>{skill.name}</strong>
+                                <Infos>
+                                    <span style={{color: relevanceColor(skill.relevance)}}> {skill.relevance}% relevante</span>
+                                    <span> Experiência: {skill.experience} {skill.experience <= 1 ? 'ano': 'anos'} </span>
+                                 
+                                </Infos>                            
+                                <SkillControll>
+                                    <button type="button">
+                                        <FaPlay /> Assistir
+                                    </button>
+                                    <span>
+                                        <FaPlus />
+                                    </span>
+                                    <span>
+                                        <FaThumbsUp />
+                                    </span>
+                                    <span>
+                                        <FaThumbsDown />
+                                    </span>
+                                </SkillControll>
+                            </SkillCard>
+                        </Skill>
+                    ))}   
+    
+                </SkillWrapper>
+    
+            <ButtonRight type="button" onClick={() => handleScroll('left')} onMouseEnter={()=> handleScroll('left') }>
+                <FaChevronRight />
+            </ButtonRight>
+    
+            </Container>
+        )
 
-            <SkillWrapper style={{ marginLeft: marginContent, width: MAX_WIDTH_CONTENT}}>
-                {foo.map((f)=>(
-                    <Skill>
-                        <img
-                            src={`https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1uS9tYSYXU5jshLx2WlnOLZrMgD.jpg`}
-                            alt={`Skill`}/>
+    
 
-                        <SkillCard>
-                            <strong>Http</strong>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>    
-                        
-                            <SkillControll>
-                                <button type="button">
-                                    <FaPlay /> Assistir
-                                </button>
-                                <span>
-                                    <FaPlus />
-                                </span>
-                                <span>
-                                    <FaThumbsUp />
-                                </span>
-                                <span>
-                                    <FaThumbsDown />
-                                </span>
-                            </SkillControll>
-                        </SkillCard>
-                    </Skill>
-                ))}   
-
-            </SkillWrapper>
-
-        <ButtonRight type="button" onClick={() => handleScroll('left')}>
-            <FaChevronRight />
-        </ButtonRight>
-
-        </Container>
-    )
 }
 
 

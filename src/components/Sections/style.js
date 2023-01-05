@@ -62,6 +62,7 @@ export const Skill = styled.div`
         position: relative;
         z-index: 5;
         width: 100%;
+        height: 300px;
         transform: scale(0.9);
         transition: all ease 0.6s;
       }
@@ -72,20 +73,14 @@ export const Skill = styled.div`
           top: 0;
           left: 10px;
           z-index: 10;
-          width: 300px;
+          width: 350px;
           height: 300px;
           transform: scale(1) translateX(90px);
           opacity: 1;
           border-radius: 0 8px 8px 0;
         }
         &:last-child > div {
-          top: 0;
-          left: 10px;
-          z-index: 10;
-          width: 300px;
-          height: 300px;
           transform: scale(1) translateX(-260px);
-          opacity: 1;
           border-radius: 8px 0 0 8px;
         }
 
@@ -137,6 +132,26 @@ export const SkillCard = styled.div`
 
 `
 
+export const Infos = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+
+  span {
+    font-size: 20px;
+
+    & + span {
+      margin-left: 20px;
+    }
+    &:nth-child(1) {
+      color: #46d369;
+      font-weight: 700;
+    }
+  }
+`
+
 export const SkillControll = styled.div`
   display: flex;
   align-items: center;
@@ -186,4 +201,11 @@ export const ButtonRight = styled.button`
   right: 0;
 `
 
-export default { Container, ButtonLetf, ButtonRight, SkillWrapper, Skill, SkillCard, SkillControll}
+export const relevances = {
+  low: "#FF0000",
+  mediumLow: "yellow",
+  medium: "orange",
+  hight: "#46d369"
+}
+
+export default { Container, ButtonLetf, ButtonRight, SkillWrapper, Skill, SkillCard, Infos, relevances, SkillControll}
