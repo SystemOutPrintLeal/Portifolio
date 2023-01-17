@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled,{keyframes} from 'styled-components';
 
 export const Container = styled.div`
     display: flex;
@@ -53,22 +53,68 @@ export const SkillWrapper = styled.div`
     transition: margin-left 1s;
 `
 
+const gradient = keyframes`
+  0% {
+    background-position: 51% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 51% 0%;
+  }
+`;
+
+
+const backgroundColor = {
+  green:"linear-gradient( #48c619, #000000);",
+  red:"linear-gradient( #a31e17, #000000);",
+  yellow:"linear-gradient( #b4b712, #000000);",
+  black:"linear-gradient( #48c619, #000000);",
+  brown:"linear-gradient( #48c619, #000000);",
+  blue:"linear-gradient( #1f2faa, #000000);",
+}
+
+export const GrandietWrapper = styled.p`
+  display: flex;
+  width: 220px;
+  height: 300px;
+  z-index: 5;
+  position: relative;
+  background: ${ props => {
+    const color = backgroundColor[props.type] ? backgroundColor[props.type] :   "linear-gradient( #a1a4b0, #000000);"
+    return color
+  }}
+  justify-content: center;
+  align-items: center;
+  background-size: 150% 150%;
+  animation: ${gradient} 8s ease infinite;
+  transform: scale(0.9);
+  transition: all ease 0.6s;
+
+  p{
+    font-family: Helvetica !important;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    opacity: 0.5;
+    margin-bottom: 5px;
+    transition: opacity ease 0.6s;
+
+  }
+
+`
+
 export const Skill = styled.div`
     position: relative;
     height: auto;
     width: 200px;
 
-    img {
-        position: relative;
-        z-index: 5;
-        width: 100%;
-        height: 300px;
-        transform: scale(0.9);
-        transition: all ease 0.6s;
-      }
-
       &:hover {
         cursor: pointer;
+        p {
+          opacity: 1;
+        }
         > div {
           top: 0;
           left: 10px;
@@ -84,10 +130,16 @@ export const Skill = styled.div`
           border-radius: 8px 0 0 8px;
         }
 
-        &:last-child > img {
+        &:last-child > .background {
           border-radius:  0 8px 8px 0;
-          transform: scale(1) translateX(50px);
+          transform: scale(1) translateX(60px);
         }
+
+        .background{
+          border-radius: 8px 0 0 8px;
+          transform: scale(1) translateX(-100px);
+        }
+
         img {
           border-radius: 8px 0 0 8px;
           transform: scale(1) translateX(-100px);
@@ -208,4 +260,4 @@ export const relevances = {
   hight: "#46d369"
 }
 
-export default { Container, ButtonLetf, ButtonRight, SkillWrapper, Skill, SkillCard, Infos, relevances, SkillControll}
+export default { Container, ButtonLetf, ButtonRight, SkillWrapper, Skill, GrandietWrapper, SkillCard, Infos, relevances, SkillControll}

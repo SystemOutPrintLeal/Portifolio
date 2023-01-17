@@ -5,6 +5,7 @@ import {
     ButtonRight,
     SkillWrapper, 
     Skill,
+    GrandietWrapper,
     SkillCard,
     SkillControll,
     Infos,
@@ -55,16 +56,19 @@ const Sections = ({skills, title}) => {
         return(
             <Container>
                 <h1>{title}</h1>
-                <ButtonLetf type="button" onClick={() => handleScroll('right') } onMouseEnter={()=> handleScroll('right') }>
+                <ButtonLetf type="button" onClick={() => handleScroll('right') } >
                     <FaChevronLeft />
                 </ButtonLetf>
     
                 <SkillWrapper style={{ marginLeft: marginContent, width: MAX_WIDTH_CONTENT}}>
                     {skills.map( (skill,key) =>(
                         <Skill key={key}>
-                            <img
+                            <GrandietWrapper className='background' type={skill.banner}> 
+                                <p>{skill.name}</p>
+                            </GrandietWrapper>
+                            {/* <img
                                 src={`https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1uS9tYSYXU5jshLx2WlnOLZrMgD.jpg`}
-                                alt={`Skill`}/>
+                                alt={`Skill`}/> */}
     
                             <SkillCard>
                                 <strong>{skill.name}</strong>
@@ -93,7 +97,7 @@ const Sections = ({skills, title}) => {
     
                 </SkillWrapper>
     
-            <ButtonRight type="button" onClick={() => handleScroll('left')} onMouseEnter={()=> handleScroll('left') }>
+            <ButtonRight type="button" onClick={() => handleScroll('left')} >
                 <FaChevronRight />
             </ButtonRight>
     
