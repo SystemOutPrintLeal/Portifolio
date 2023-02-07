@@ -75,7 +75,7 @@ const backgroundColor = {
   blue:"linear-gradient( #1f2faa, #000000);",
 }
 
-export const GrandietWrapper = styled.p`
+export const GrandietWrapper = styled.span`
   display: flex;
   width: 220px;
   height: 300px;
