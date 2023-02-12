@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/static/js/main.1badeed9.js",
+    "static/media/background_featured.png": "/static/media/background_featured.e9b0872e72a92c3c78ca.png",
+    "static/media/logo.png": "/static/media/logo.0843e2dcce24e060a43d.png",
+    "index.html": "/index.html",
+    "main.1badeed9.js.map": "/static/js/main.1badeed9.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.1badeed9.js"
+  ]
+}
