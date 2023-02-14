@@ -14,7 +14,7 @@ const Header = () => {
             window.removeEventListener('scroll', () =>
             setIsBlack(window.scrollY > 10))
         }
-    },[])
+    })
 
     return (
         <Container isBlack={isBlack} >

@@ -26,7 +26,7 @@ const Featured = () => {
                         <p>
                             Ei, eu sou o Victor eu gosto de construir coisas {":)"}<br/>
                             Atualmente eu faço isso como trabalho e também como hobby.<br/>
-                            Eu estou sempre aprendendo algo novo pois adoro o que faço.
+                            Eu estou sempre aprendendo algo novo pois adoro oque faço.
                         </p>
                         <span>
                             <strong>Gênero:</strong> Undefined
