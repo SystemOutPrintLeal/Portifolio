@@ -28,7 +28,7 @@ export const HeaderItems = styled.div`
 
     img {
       width: auto;
-      height: 30px;
+      height: 40px;
       margin-right: 5px;
     }
 
@@ -37,7 +37,7 @@ export const HeaderItems = styled.div`
         display: flex;
         align-items: center;
         li {
-          font-size: 17px;
+          font-size: 22px;
           color: #FFF;
           font-weight: 400;
           & + li {
@@ -55,8 +55,8 @@ export const ProfileItems = styled.div`
   align-items: center;
 
   > svg {
-    width: 22px;
-    height: 22px;
+    width: 30px;
+    height: 30px;
     color: #FFF;
     margin-right: 30px;
   }
@@ -69,13 +69,13 @@ export const ProfileItems = styled.div`
     border: 0;
     img {
       width: auto;
-      height: 30px;
+      height: 35px;
       border-radius: 6px;
       margin-right: 3px;
     }
     > svg {
-      width: 15px;
-      height: 15px;
+      width: 25px;
+      height: 25px;
       margin-right: 10px;
       color: #FFF;
     }

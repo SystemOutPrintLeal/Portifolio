@@ -2,6 +2,7 @@ import React,{useEffect, useState} from 'react'
 import Header from '../../components/Header'
 import Featured from '../../components/Featured'
 import Sections from '../../components/Sections'
+import Footer from '../../components/Footer'
 import { backend, frontend } from '../../services/skills'
 import { FaHammer } from 'react-icons/fa';
 
@@ -37,6 +38,7 @@ export default function Home(){
             <Featured/>
             <Sections title="Backend" skills ={backend}/>
             <Sections title="Frontend" skills ={frontend}/>
+            <Footer/>
             <ConstructionFlag isVisible={'flex'}/>
 
         </>

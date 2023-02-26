@@ -1,6 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
+
+
   ::-webkit-scrollbar {
     width: 2px;
     height: 2px;
@@ -28,6 +30,7 @@ export const GlobalStyle = createGlobalStyle`
   } 
 
   body {
+    overflow-x: hidden;
     background: linear-gradient(80deg, #0a0a0a, #111111);
     color: #FFF;
     -webkit-font-smoothing: antialiased;

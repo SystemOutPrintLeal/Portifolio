@@ -24,9 +24,8 @@ const Featured = () => {
                             <span> 3 Temporadas </span>
                         </InsindeInfo>
                         <p>
-                            Ei, eu sou o Victor eu gosto de construir coisas {":)"}<br/>
-                            Atualmente eu faço isso como trabalho e também como hobby.<br/>
-                            Eu estou sempre aprendendo algo novo pois adoro oque faço.
+                            Sou viciado em café, apaixonado em resolver e estou sempre sempre em busca de novos desafios.<br/> 
+                            Tenho experiência em várias linguagens e tecnologias, além de ser um excelente companheiro de equipe {':)'}
                         </p>
                         <span>
                             <strong>Gênero:</strong> Undefined

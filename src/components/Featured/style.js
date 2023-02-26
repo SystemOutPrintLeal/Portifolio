@@ -6,7 +6,6 @@ export const Container = styled.div`
 `;
 
 export const FeaturedBackground = styled.div`
-  
   background-color: blue;
   background-image: url(${BackgroundUrl});
   background-size: cover;
@@ -38,13 +37,13 @@ export const InsideFeatured = styled.div`
   );
 
   h1 {
-    font-size: 50px;
+    font-size: 55px;
     margin-bottom: 30px;
   }
 
   p {
-    width: 500px;
-    font-size: 18px;
+    width: 560px;
+    font-size: 23px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
     margin-bottom: 10px;
  
@@ -55,9 +54,9 @@ export const InsideFeatured = styled.div`
   }
 
   > span {
-    font-size: 15px;
+    font-size: 18px;
     color: #b9bbbe;
-    margin-bottom: 20px;
+    margin: 35px 0 20px 0;
   }
 
 `
@@ -70,7 +69,7 @@ export const InsindeInfo = styled.div`
   margin-bottom: 10px;
 
   span {
-    font-size: 15px;
+    font-size: 20px;
     & + span {
       margin-left: 20px;
     }
@@ -93,6 +92,7 @@ export const Buttons = styled.div`
     cursor: pointer;
     text-decoration: none;
     font-size: 15px;
+    height: 45px;
     svg {
       width: 15px;
       height: 15px;
